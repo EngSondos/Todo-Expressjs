@@ -1,0 +1,10 @@
+const helper = require('../helpers')
+const express = require('express')
+const router = express.Router()
+// console.log(router)
+router.get('/',helper.list)
+router.post('/',helper.addToTodo)
+router.put('/:id',helper.updateToTodo)
+router.delete('/:id',helper.removeFromTodo)
+router.get('/check/:id',helper.check)
+module.exports=router
